@@ -1,3 +1,4 @@
+<img width="1012" height="764" alt="EE9F37DB-7767-49BE-9A60-99057E45E11F" src="https://github.com/user-attachments/assets/b6d1b9b0-10ea-4e6e-a45c-2a3337c4a089" />
 # ImageSqueezer
 アイコン画像やネット上にアップロードする時に画像が高画質すぎてアップロードできない経験があり作成しました。
 Web上で無料でリサイズできるサイトもありますが、なるべく自分の環境で動作させたいのでアプリを作成しました。
