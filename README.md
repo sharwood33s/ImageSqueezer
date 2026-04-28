@@ -31,3 +31,9 @@ open dist/ImageSqueezer.app
 
 元画像は `Assets/AppIcon.png`、macOS 用アイコンは `Assets/AppIcon.icns` です。
 `./scripts/build_app.sh` 実行時に `.icns` が再生成され、`dist/ImageSqueezer.app` に同梱されます。
+
+## ライセンス
+
+このプロジェクトは MIT ライセンスの下で公開されています。詳細は [LICENSE](LICENSE) ファイルを参照してください。
+
+AppIcon.png はフリー素材を使用しています。著作権は作者に帰属します。

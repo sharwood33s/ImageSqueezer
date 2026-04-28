@@ -1,0 +1,22 @@
+# Build artifacts
+.build/
+dist/
+build/
+
+# Xcode
+*.xcuserdatad/
+*.xcworkspace/
+*.xcodeproj/
+
+# macOS
+.DS_Store
+
+# Swift Package Manager
+.swiftpm/
+
+# VS Code
+.vscode/
+
+# Temporary files
+*.tmp
+*.temp
