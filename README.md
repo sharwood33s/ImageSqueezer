@@ -24,6 +24,7 @@ open dist/ImageSqueezer.app
 - JPEG、PNG、HEIC、TIFF、WebP の読み込み
 - JPEG、PNG、HEIC への書き出し
 - 最大幅・最大高さによるリサイズ
+- サムネイル、ブログ、SNS 正方形、フルHD、4K の縮小プリセット
 - 縦横比維持の切り替え
 - JPEG/HEIC 品質の調整
 - 複数画像の一括処理
