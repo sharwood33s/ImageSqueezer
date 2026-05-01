@@ -107,6 +107,37 @@ enum ResizePreset: String, CaseIterable, Identifiable, Sendable {
     }
 }
 
+enum CompressionPreset: String, CaseIterable, Identifiable, Sendable {
+    case highQuality
+    case standard
+    case compact
+    case smallest
+
+    var id: String { rawValue }
+
+    var label: String {
+        switch self {
+        case .highQuality: "高画質"
+        case .standard: "標準"
+        case .compact: "軽量"
+        case .smallest: "最小サイズ"
+        }
+    }
+
+    var jpegQuality: Double {
+        switch self {
+        case .highQuality: 0.9
+        case .standard: 0.78
+        case .compact: 0.6
+        case .smallest: 0.4
+        }
+    }
+
+    var qualityLabel: String {
+        "\(Int(jpegQuality * 100))%"
+    }
+}
+
 struct ResizeOptions: Equatable, Sendable {
     var maxWidth: Double = 1920
     var maxHeight: Double = 1080
@@ -120,5 +151,9 @@ struct ResizeOptions: Equatable, Sendable {
         maxWidth = preset.maxWidth
         maxHeight = preset.maxHeight
         keepAspectRatio = true
+    }
+
+    mutating func apply(_ preset: CompressionPreset) {
+        jpegQuality = preset.jpegQuality
     }
 }

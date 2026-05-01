@@ -120,6 +120,19 @@ struct ContentView: View {
                 }
                 Slider(value: $options.jpegQuality, in: 0.1...1.0, step: 0.01)
                     .disabled(options.outputFormat == .png)
+                Menu {
+                    ForEach(CompressionPreset.allCases) { preset in
+                        Button {
+                            options.apply(preset)
+                        } label: {
+                            Label("\(preset.label)（\(preset.qualityLabel)）", systemImage: "slider.horizontal.3")
+                        }
+                    }
+                } label: {
+                    Label("圧縮率を選択", systemImage: "slider.horizontal.3")
+                }
+                .buttonStyle(.bordered)
+                .disabled(options.outputFormat == .png)
             }
 
             VStack(alignment: .leading, spacing: 8) {
