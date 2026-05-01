@@ -19,6 +19,12 @@ Finder から開ける `.app` を作る場合:
 open dist/ImageSqueezer.app
 ```
 
+Dock や `/Applications` から起動するアプリを最新版に更新する場合:
+
+```sh
+./scripts/install_app.sh
+```
+
 ## 機能
 
 - JPEG、PNG、HEIC、TIFF、WebP の読み込み
