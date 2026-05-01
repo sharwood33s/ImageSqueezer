@@ -62,6 +62,23 @@ struct ContentView: View {
                 .font(.headline)
 
             VStack(alignment: .leading, spacing: 10) {
+                Text("プリセット")
+                    .font(.subheadline.weight(.semibold))
+                Menu {
+                    ForEach(ResizePreset.allCases) { preset in
+                        Button {
+                            options.apply(preset)
+                        } label: {
+                            Label("\(preset.label)（\(preset.sizeLabel)）", systemImage: "photo")
+                        }
+                    }
+                } label: {
+                    Label("サイズを選択", systemImage: "aspectratio")
+                }
+                .buttonStyle(.bordered)
+            }
+
+            VStack(alignment: .leading, spacing: 10) {
                 Text("最大サイズ")
                     .font(.subheadline.weight(.semibold))
                 HStack {
